@@ -34,6 +34,9 @@ Then, add the chip to your circuit by adding a `st7735` item to the `parts` sect
   },
 ```
 
+## Screenshot
+![Usage](wokwi.png)
+
 # Development
 
 The actual source code for the chip lives in [src/main.c](src/main.c), and the pins are described in [chip.json](chip.json).
