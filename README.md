@@ -22,7 +22,7 @@ To use this chip in your project, include it as a dependency in your `diagram.js
 
 ```json
   "dependencies": {
-    "st7735": "github:martysweet/st7735-wokwi-chip@1.0.0"
+    "st7735": "github:martysweet/st7735-wokwi-chip@1.0.1"
   }
 ```
 
