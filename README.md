@@ -1,5 +1,6 @@
 # ST7735 Chip 
 Simulation chip for [Wokwi](https://wokwi.com/)
+Based on template: https://github.com/wokwi/inverter-chip
 
 ## Pin names
 
