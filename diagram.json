@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -9, "left": -0.6, "attrs": {} },
+    { "type": "chip-st7735", "id": "chip1", "top": -104.58, "left": 398.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:13", "chip1:SCK", "green", [ "v0" ] ],
+    [ "uno:11", "chip1:MOSI", "green", [ "v0" ] ],
+    [ "uno:9", "chip1:DC", "green", [ "v0" ] ],
+    [ "uno:8", "chip1:RST", "green", [ "v0" ] ],
+    [ "chip1:CS", "uno:10", "green", [ "h0" ] ],
+    [ "chip1:VCC", "uno:5V", "red", [ "h-28.8", "v268.8", "h-215" ] ],
+    [ "uno:GND.2", "chip1:GND", "black", [ "v28.7", "h215.1", "v-249.6" ] ]
+  ],
+  "dependencies": {}
+}

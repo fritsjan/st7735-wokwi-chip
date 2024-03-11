@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "name": "ST7735 [128x160]",
+  "author": "Marty Sweet",
+  "license": "MIT",
+  "docs": "https://github.com/martysweet/st7735-wokwi-chip/blob/main/docs/README.md",
+  "pins": [
+    "SCK",
+    "MOSI",
+    "CS",
+    "DC",
+    "RST",
+    "VCC",
+    "GND",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "display": {
+    "width": 128,
+    "height": 160
+  }
+}

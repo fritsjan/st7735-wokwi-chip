@@ -1,0 +1,8 @@
+[wokwi]
+version = 1
+elf = 'test/display/build/arduino.avr.uno/display.ino.elf'
+firmware = 'test/display/build/arduino.avr.uno/display.ino.hex'
+
+[[chip]]
+name = 'st7735'
+binary = 'dist/chip.wasm'
