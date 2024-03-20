@@ -63,7 +63,7 @@ void chip_reset(chip_state_t *chip) {
 
   chip->active_row = 0;
   chip->row_start = 0;
-  chip->row_end = 7;
+  chip->row_end = 35; // This should get overwritten by the first RASET command, if not, only some of the display will be used with garbage data
 }
 
 void chip_init(void) {
@@ -112,10 +112,10 @@ void chip_pin_change(void *user_data, pin_t pin, uint32_t value) {
   chip_state_t *chip = (chip_state_t*)user_data;
 
   // Handle CS pin logic
+  // Don't reset command handlers on CS pin toggle
+  // This is to allow the chip to process the remaining SPI command)
   if (pin == chip->cs_pin) {
     if (value == LOW) {
-      chip->command_size = 0;
-      chip->command_index = 0;
       spi_start(chip->spi, chip->spi_buffer, sizeof(chip->spi_buffer));
     } else {
       spi_stop(chip->spi);
@@ -124,7 +124,6 @@ void chip_pin_change(void *user_data, pin_t pin, uint32_t value) {
 
   // Handle DC pin logic
   if (pin == chip->dc_pin && chip->mode != value) {
-    printf("DC pin changed to %d\n", value);
     spi_stop(chip->spi); // Process remaining data in SPI buffer
     chip->mode = value;
     if (pin_read(chip->cs_pin) == LOW) {
