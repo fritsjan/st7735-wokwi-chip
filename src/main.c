@@ -124,6 +124,7 @@ void chip_pin_change(void *user_data, pin_t pin, uint32_t value) {
 
   // Handle DC pin logic
   if (pin == chip->dc_pin && chip->mode != value) {
+    printf("DC pin changed to %d\n", value);
     spi_stop(chip->spi); // Process remaining data in SPI buffer
     chip->mode = value;
     if (pin_read(chip->cs_pin) == LOW) {
