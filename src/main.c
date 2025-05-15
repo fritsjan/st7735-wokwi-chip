@@ -63,7 +63,7 @@ void chip_reset(chip_state_t *chip) {
 
   chip->active_row = 0;
   chip->row_start = 0;
-  chip->row_end = 35; // This should get overwritten by the first RASET command, if not, only some of the display will be used with garbage data
+  chip->row_end = 35; // This should get overwritten by the first RESET command, if not, only some of the display will be used with garbage data
 }
 
 void chip_init(void) {

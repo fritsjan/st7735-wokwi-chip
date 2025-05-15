@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "name": "ST7735 [128x160]",
-  "author": "Marty Sweet",
+  "name": "ST7735 [80x160]",
+  "author": "Marty Sweet edited by productbakery",
   "license": "MIT",
   "docs": "https://github.com/martysweet/st7735-wokwi-chip/blob/main/docs/README.md",
   "pins": [
@@ -21,7 +21,7 @@
     ""
   ],
   "display": {
-    "width": 128,
+    "width": 80,
     "height": 160
   }
 }
